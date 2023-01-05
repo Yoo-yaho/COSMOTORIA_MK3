@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -44,8 +46,17 @@ TagManager:
   - name: Ground
     uniqueID: 3469115173
     locked: 0
+  - name: Desert
+    uniqueID: 2972931393
+    locked: 0
   - name: Water
     uniqueID: 3137018787
+    locked: 0
+  - name: Castle
+    uniqueID: 3412734321
+    locked: 0
+  - name: Castle Object
+    uniqueID: 2066385527
     locked: 0
   - name: Object1
     uniqueID: 2011749885
