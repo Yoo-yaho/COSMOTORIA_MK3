@@ -36,9 +36,9 @@ public class PlayerAction : MonoBehaviour
         bool vUp = manager.isAction ? false : Input.GetButtonUp("Vertical");
 
         // 수평 Move인가?
-        if (hDown || vUp)
+        if (hDown)
             isHorizonMove = true;
-        else if (vDown || hUp)
+        else if (vDown)
             isHorizonMove = false;
         else if (hUp || vUp)
             isHorizonMove = h != 0;
@@ -69,7 +69,8 @@ public class PlayerAction : MonoBehaviour
 
         // ScanObject
         if (Input.GetButtonDown("Jump") && scanObject != null)
-            manager.Scan(scanObject);
+            //manager.Scan(scanObject);
+            Debug.Log("This is : " + scanObject.name);
     }
 
     private void FixedUpdate()
