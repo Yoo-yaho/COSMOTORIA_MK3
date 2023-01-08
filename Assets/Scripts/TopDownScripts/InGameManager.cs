@@ -23,31 +23,38 @@ public class InGameManager : MonoBehaviour
 
     public void Scan(GameObject scanObj)
     {
-        if (isAction)
-        {
-            isAction = false;
-        }
-        else
-        {
-            isAction = true;
-            scanObject = scanObj;
-            ObjectData objectData = scanObject.GetComponent<ObjectData>();
-            Talk(objectData.id, objectData.isNpc);
-        }
+        //if (isAction)
+        //{
+        //    isAction = false;
+        //}
+        //else
+        //{
+        //    isAction = true;
+        //    scanObject = scanObj;
+        //    ObjectData objectData = scanObject.GetComponent<ObjectData>();
+        //    Talk(objectData.id, objectData.isNpc);
+        //}
 
-        talkPanel.SetActive(isAction);     
+        //talkPanel.SetActive(isAction);
+
+        scanObject = scanObj;
+        ObjectData objectData = scanObject.GetComponent<ObjectData>();
+        Talk(objectData.id, objectData.isNpc);
+
+
+        talkPanel.SetActive(isAction);
     }
 
     void Talk(int id, bool isNpc)
     {
-        int questTalkIndex = questManager.GetQuestTalkIndex(id);
-        string talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+    //    int questTalkIndex = questManager.GetQuestTalkIndex(id);
+        string talkData = talkManager.GetTalk(id, talkIndex);
 
         if (talkData == null)
         {
             talkIndex = 0;
             isAction = false;
-            Debug.Log(questManager.CheckQuest(id));
+            //Debug.Log(questManager.CheckQuest(id));
             return;
         }
 

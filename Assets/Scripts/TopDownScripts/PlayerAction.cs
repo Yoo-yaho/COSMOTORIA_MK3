@@ -69,8 +69,7 @@ public class PlayerAction : MonoBehaviour
 
         // ScanObject
         if (Input.GetButtonDown("Jump") && scanObject != null)
-            //manager.Scan(scanObject);
-            Debug.Log("This is : " + scanObject.name);
+            manager.Scan(scanObject);
     }
 
     private void FixedUpdate()
