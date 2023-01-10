@@ -11,6 +11,7 @@ public class InGameManager : MonoBehaviour
 
     public QuestManager questManager;
     public Image portraitImage;
+    public Image FleryImage;
     public TalkManager talkManager;
     public Text talkText;
     public GameObject scanObject;
@@ -18,7 +19,7 @@ public class InGameManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(questManager.CheckQuest());
+        // Debug.Log(questManager.CheckQuest());
     }
 
     public void Scan(GameObject scanObj)
@@ -47,14 +48,14 @@ public class InGameManager : MonoBehaviour
 
     void Talk(int id, bool isNpc)
     {
-    //    int questTalkIndex = questManager.GetQuestTalkIndex(id);
-        string talkData = talkManager.GetTalk(id, talkIndex);
+        int questTalkIndex = questManager.GetQuestTalkIndex(id);
+        string talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
 
         if (talkData == null)
         {
             talkIndex = 0;
             isAction = false;
-            //Debug.Log(questManager.CheckQuest(id));
+            questManager.CheckQuest(id);
             return;
         }
 
