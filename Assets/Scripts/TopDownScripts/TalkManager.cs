@@ -29,7 +29,7 @@ public class TalkManager : MonoBehaviour
 
         // Quest Talk
         talkData.Add(10 + 2000, new string[] { "Zzz...:1", "어... 왔니...:0", "쿨쿨....:1" });
-        talkData.Add(11 + 2000, new string[] { "빨리가봐:0" });
+        talkData.Add(20 + 1000, new string[] { "음....:0", "음? 무슨 일인가?:0" });
 
         //talkData.Add(11 + 2000, new string[] { "음....:0", "무슨 일이지?:1" });
         //talkData.Add(12 + 2000, new string[] { "여왕님이 보내셨나?:0", "음... 그렇구만:1",

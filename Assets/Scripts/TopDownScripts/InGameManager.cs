@@ -55,7 +55,7 @@ public class InGameManager : MonoBehaviour
         {
             talkIndex = 0;
             isAction = false;
-            questManager.CheckQuest(id);
+            Debug.Log(questManager.CheckQuest(id));
             return;
         }
 

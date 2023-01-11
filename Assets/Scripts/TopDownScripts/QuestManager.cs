@@ -19,9 +19,9 @@ public class QuestManager : MonoBehaviour
 
     public void GenerateData()
     {
-        questList.Add(10, new QuestData("ø©ø’ √π ¥Î»≠", new int[] { 2000, 2000, 2000 }));
+        questList.Add(10, new QuestData("ø©ø’ √π ¥Î»≠", new int[] { 2000 }));
 
-        questList.Add(20, new QuestData("∫Œ≈π µË±‚", new int[] { 5000, 2000 }));
+        questList.Add(20, new QuestData("∫Œ≈π µË±‚", new int[] { 1000 }));
 
         questList.Add(30, new QuestData("∫Œ≈π øœ∑·", new int[] { 0 }));
     }
