@@ -9,6 +9,7 @@ public class TalkManager : MonoBehaviour
     Dictionary<int, Sprite> portraitData;
 
     public Sprite[] portraitArr;
+    public Sprite[] FleryportraitArr;
 
     private void Awake()
     {
@@ -29,8 +30,13 @@ public class TalkManager : MonoBehaviour
 
         // Quest Talk
         talkData.Add(10 + 2000, new string[] { "Zzz...:1", "어... 왔니...:0", "쿨쿨....:1" });
-        talkData.Add(20 + 1000, new string[] { "음....:0", "음? 무슨 일인가?:0" });
+        talkData.Add(11 + 2000, new string[] { "엇...:0", "아... 일단 사보텐한테 가봐...:0", "쿨쿨....:1" });
 
+        talkData.Add(20 + 2000, new string[] { "(일어날 기미가 보이지 않는다...):0" });
+        talkData.Add(20 + 1000, new string[] { "여왕님이?:0", "그렇구만...:0", "일단 그 전에 부탁 좀 들어주겠나?:0" });
+        talkData.Add(21 + 1000, new string[] { "소인이 물건 하나를 잃어버려서 말일세...:0", "상자 하나만 찾아주시게나:0" });
+        talkData.Add(21 + 5000, new string[] { "상자를 찾았다!" });
+        talkData.Add(22 + 1000, new string[] { "오오 고맙네!:0" });
         //talkData.Add(11 + 2000, new string[] { "음....:0", "무슨 일이지?:1" });
         //talkData.Add(12 + 2000, new string[] { "여왕님이 보내셨나?:0", "음... 그렇구만:1",
         //                                        "일단 저기 있는 상자 좀 갖다주겠나?:0"});
