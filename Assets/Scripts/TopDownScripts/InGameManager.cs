@@ -65,12 +65,15 @@ public class InGameManager : MonoBehaviour
 
             portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
             portraitImage.color = new Color(1, 1, 1, 1);
+
+            FleryImage.color = new Color(1, 1, 1, 1);
         }
         else
         {
             talkText.text = talkData;
 
             portraitImage.color = new Color(1, 1, 1, 0);
+            FleryImage.color = new Color(1, 1, 1, 0);
         }
 
         isAction = true;
