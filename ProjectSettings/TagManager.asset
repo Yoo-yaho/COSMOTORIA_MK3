@@ -43,8 +43,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
+  - name: Ground1
     uniqueID: 3469115173
+    locked: 0
+  - name: Ground2
+    uniqueID: 2045463303
+    locked: 0
+  - name: Dirt
+    uniqueID: 345197811
+    locked: 0
+  - name: Grass
+    uniqueID: 2312817003
     locked: 0
   - name: Desert
     uniqueID: 2972931393
@@ -63,6 +72,9 @@ TagManager:
     locked: 0
   - name: NPC
     uniqueID: 1975888827
+    locked: 0
+  - name: Bullet
+    uniqueID: 3129416669
     locked: 0
   - name: Player
     uniqueID: 2748251103

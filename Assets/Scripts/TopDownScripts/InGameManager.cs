@@ -11,15 +11,17 @@ public class InGameManager : MonoBehaviour
 
     public QuestManager questManager;
     public Image portraitImage;
+    public Animator portraitAnim;
     public Image FleryImage;
     public TalkManager talkManager;
     public Text talkText;
     public GameObject scanObject;
-    public GameObject talkPanel;
+    public Animator talkPanel;
+    public Sprite previousSprite;
 
     private void Start()
     {
-        // Debug.Log(questManager.CheckQuest());
+         Debug.Log(questManager.CheckQuest());
     }
 
     public void Scan(GameObject scanObj)
@@ -43,7 +45,7 @@ public class InGameManager : MonoBehaviour
         Talk(objectData.id, objectData.isNpc);
 
 
-        talkPanel.SetActive(isAction);
+        talkPanel.SetBool("isShow", isAction);
     }
 
     void Talk(int id, bool isNpc)
@@ -65,6 +67,13 @@ public class InGameManager : MonoBehaviour
 
             portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
             portraitImage.color = new Color(1, 1, 1, 1);
+
+            if (previousSprite != portraitImage.sprite)
+            {
+                portraitAnim.SetTrigger("doEffect");
+                previousSprite = portraitImage.sprite;
+            }
+               
 
             FleryImage.color = new Color(1, 1, 1, 1);
         }

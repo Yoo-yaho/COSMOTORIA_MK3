@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
 
     public void GenerateData()
     {
-        questList.Add(10, new QuestData("¿©¿Õ Ã¹ ´ëÈ­", new int[] { 2000, 2000 }));
+        questList.Add(10, new QuestData("¿©¿Õ°ú ´ëÈ­ÇÏ±â", new int[] { 2000, 2000 }));
 
         questList.Add(20, new QuestData("ºÎÅ¹ µè±â", new int[] { 1000, 5000, 1000 }));
 
@@ -44,6 +44,12 @@ public class QuestManager : MonoBehaviour
         if (questActionIndex == questList[questId].npcId.Length)
             NextQuest();
 
+        // Äù½ºÆ® ÀÌ¸§
+        return questList[questId].questName;
+    }
+
+    public string CheckQuest()
+    {
         // Äù½ºÆ® ÀÌ¸§
         return questList[questId].questName;
     }
