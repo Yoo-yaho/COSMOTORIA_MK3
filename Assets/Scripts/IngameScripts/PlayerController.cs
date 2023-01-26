@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float ShootDelay;
     public float MaxDelay;
     public float DestroyBullet;
+
+    public Stage_Data sd;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,12 @@ public class PlayerController : MonoBehaviour
         MovingAnim(xInput); //플레이어 애니메이션
         Fire();
         Reload();
+    }
+
+    void LateUpdate()
+    {
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, sd.LimitMin.x, sd.LimitMax.x),
+            Mathf.Clamp(transform.position.y, sd.LimitMin.y, sd.LimitMax.y),transform.position.z);
     }
 
 
