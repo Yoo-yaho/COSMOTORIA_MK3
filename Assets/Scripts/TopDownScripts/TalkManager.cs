@@ -31,7 +31,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(10 + 2000, new string[] { "Zzz...:1", "어... 왔니...:0", "쿨쿨....:1" });
         talkData.Add(11 + 2000, new string[] { "엇...:0", "아... 일단 사보텐한테 가봐...:0", "쿨쿨....:1" });
 
-        talkData.Add(20 + 2000, new string[] { "(일어날 기미가 보이지 않는다...):0" });
+        talkData.Add(20 + 2000, new string[] { "(일어날 기미가 보이지 않는다...):1" });
         talkData.Add(20 + 1000, new string[] { "여왕님이?:0", "그렇구만...:0", "일단 그 전에 부탁 좀 들어주겠나?:0" });
         talkData.Add(21 + 1000, new string[] { "소인이 물건 하나를 잃어버려서 말일세...:0", "상자 하나만 찾아주시게나:0" });
         talkData.Add(21 + 5000, new string[] { "상자를 찾았다!" });

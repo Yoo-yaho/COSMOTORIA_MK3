@@ -14,10 +14,10 @@ public class InGameManager : MonoBehaviour
     public Animator portraitAnim;
     public Image FleryImage;
     public TalkManager talkManager;
-    public Text talkText;
     public GameObject scanObject;
     public Animator talkPanel;
     public Sprite previousSprite;
+    public TypeEfffect talk;
 
     private void Start()
     {
@@ -50,8 +50,19 @@ public class InGameManager : MonoBehaviour
 
     void Talk(int id, bool isNpc)
     {
-        int questTalkIndex = questManager.GetQuestTalkIndex(id);
-        string talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+        int questTalkIndex = 0;
+        string talkData = "";
+
+        if (talk.isTexting)
+        {
+            talk.SetMsg("");
+            return;
+        }        
+        else
+        {
+            questTalkIndex = questManager.GetQuestTalkIndex(id);
+            talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+        }      
 
         if (talkData == null)
         {
@@ -63,7 +74,7 @@ public class InGameManager : MonoBehaviour
 
         if (isNpc)
         {
-            talkText.text = talkData.Split(':')[0];
+            talk.SetMsg(talkData.Split(':')[0]);
 
             portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
             portraitImage.color = new Color(1, 1, 1, 1);
@@ -79,7 +90,7 @@ public class InGameManager : MonoBehaviour
         }
         else
         {
-            talkText.text = talkData;
+            talk.SetMsg(talkData);
 
             portraitImage.color = new Color(1, 1, 1, 0);
             FleryImage.color = new Color(1, 1, 1, 0);
