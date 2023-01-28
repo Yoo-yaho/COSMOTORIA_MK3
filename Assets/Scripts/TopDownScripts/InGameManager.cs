@@ -16,12 +16,23 @@ public class InGameManager : MonoBehaviour
     public TalkManager talkManager;
     public Text talkText;
     public GameObject scanObject;
+    public GameObject menu;
     public Animator talkPanel;
     public Sprite previousSprite;
 
     private void Start()
     {
          Debug.Log(questManager.CheckQuest());
+    }
+
+    private void Update()
+    {
+        // 서브 메뉴
+        if (Input.GetButtonDown("Cancel"))
+            if (menu.activeSelf)
+                 menu.SetActive(false);
+            else
+                 menu.SetActive(true);
     }
 
     public void Scan(GameObject scanObj)
