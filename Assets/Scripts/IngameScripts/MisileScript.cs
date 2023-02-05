@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class MisileScript : MonoBehaviour
 {
+    [SerializeField]
     private Transform[] transforms = new Transform[3];
-    private GameObject playerObject;
+
+    [SerializeField]
+    private Transform playerObject;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        playerObject = GetComponentInParent<GameObject>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        playerObject = transform.GetComponentInParent<Transform>();
         transforms[0] = playerObject.transform;
-       
     }
 
     public Vector2 bazier(float t)
