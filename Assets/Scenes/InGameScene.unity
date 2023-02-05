@@ -631,7 +631,15 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: 24689380d99e86e49bbbbb7f20161afd, type: 2}
+=======
+<<<<<<< Updated upstream
+  - {fileID: 2100000, guid: 4423659904041214bb1f483698b22959, type: 2}
+=======
+  - {fileID: 2100000, guid: ee9ef22900003f446aa9cc5034a9e1d4, type: 2}
+>>>>>>> Stashed changes
+>>>>>>> main
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -676,12 +684,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &1717628063
 MonoBehaviour:
+=======
+--- !u!1 &2106490243
+GameObject:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1717628058}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -689,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
+<<<<<<< HEAD
 --- !u!1 &1954349978
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,17 +716,33 @@ GameObject:
   - component: {fileID: 1954349979}
   m_Layer: 0
   m_Name: EnemySpawner
+=======
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106490245}
+  - component: {fileID: 2106490244}
+  m_Layer: 0
+  m_Name: Stage1BG
+>>>>>>> main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 1
 --- !u!114 &1954349979
 MonoBehaviour:
+=======
+  m_IsActive: 0
+--- !u!212 &2106490244
+SpriteRenderer:
+>>>>>>> main
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1954349978}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -721,11 +752,61 @@ MonoBehaviour:
   stage: {fileID: 11400000, guid: f0bc8e6d757540548b7d0908cc713661, type: 2}
   N_Enemy: {fileID: 8862352397244952979, guid: 5cd547ddb9be1694fa4b350a67bb2fe4, type: 3}
 --- !u!4 &1954349980
+=======
+  m_GameObject: {fileID: 2106490243}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 14d5be182e7e867429ad3008b343cfa1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3, y: 7.46875}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2106490245
+>>>>>>> main
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1954349978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.955872, y: -3.341885, z: 42.85601}
@@ -784,3 +865,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   playerObject: {fileID: 0}
+=======
+  m_GameObject: {fileID: 2106490243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
+>>>>>>> main
